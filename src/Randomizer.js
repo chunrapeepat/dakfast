@@ -70,6 +70,10 @@ const Randomizer = ({src}) => {
   }
 
   function incrementCounter() {
+    if (counter >= 10) {
+      window.location.reload();
+    }
+
     setCounter(counter + 1);
   }
 
