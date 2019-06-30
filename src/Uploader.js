@@ -3,17 +3,7 @@ import styled from "styled-components";
 import ReactLoading from "react-loading";
 
 import Randomizer from "./Randomizer";
-
-const UploadButton = styled.div`
-  padding: 10px 0;
-  background: white;
-  width: 100%;
-  text-align: center;
-  border-radius: 5rem;
-  cursor: pointer;
-
-  font-size: 1.4em;
-`;
+import {Button} from "./Button";
 
 const Loader = styled.div`
   position: fixed;
@@ -38,7 +28,7 @@ const Loader = styled.div`
 const Uploader = () => {
   const uploadInput = useRef(null);
   const [file, setFile] = useState(null);
-  const [result, setResult] = useState({});
+  const [result, setResult] = useState();
 
   const [loading, setLoading] = useState(0);
 
@@ -89,12 +79,12 @@ const Uploader = () => {
 
       {file && result && <Randomizer src={file} result={result} />}
 
-      <UploadButton
+      <Button
         onClick={() => {
           uploadInput.current.click();
         }}>
         Take a Picture!!
-      </UploadButton>
+      </Button>
     </div>
   );
 };
