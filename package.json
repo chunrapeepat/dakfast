@@ -16,7 +16,7 @@
     "react-loading": "^2.0.3",
     "react-scripts": "3.0.1",
     "styled-components": "^4.3.2",
-    "yarn": "^1.16.0"
+    "yarn": "^1.22.0"
   },
   "scripts": {
     "start": "react-scripts start",
